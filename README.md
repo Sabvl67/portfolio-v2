@@ -1,46 +1,169 @@
-# Getting Started with Create React App
+# Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, production-ready portfolio website built with React, TypeScript, and Tailwind CSS. Features smooth animations, dark/light theme toggle, and full responsiveness.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **🎨 Modern Design**: Clean, minimal design with subtle animations and micro-interactions
+- **🌓 Theme Toggle**: Smooth transition between light and dark modes with persistent preference
+- **📱 Fully Responsive**: Optimized for desktop, tablet, and mobile devices
+- **⚡ Performance Optimized**: Lazy loading, optimized animations, and clean code
+- **♿ Accessible**: ARIA labels, keyboard navigation, and reduced motion support
+- **🎯 SEO Ready**: Semantic HTML5 structure
 
-### `npm start`
+## 🚀 Quick Start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js (v14 or higher)
+- npm or yarn
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd portfolio-v2
+```
 
-### `npm run build`
+2. Install dependencies:
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Start the development server:
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Built With
 
-### `npm run eject`
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **CSS Variables** - Theme management
+- **Intersection Observer API** - Scroll animations
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📁 Project Structure
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+├── components/         # React components
+│   ├── Header.tsx     # Navigation header
+│   ├── Hero.tsx       # Hero/intro section
+│   ├── Skills.tsx     # Skills section
+│   ├── Projects.tsx   # Projects section
+│   ├── ProjectCard.tsx # Individual project card
+│   ├── Contact.tsx    # Contact form and social links
+│   ├── Footer.tsx     # Footer
+│   └── ThemeToggle.tsx # Theme switcher button
+├── contexts/          # React contexts
+│   └── ThemeContext.tsx # Theme state management
+├── hooks/             # Custom hooks
+│   └── useIntersectionObserver.ts # Scroll animation hook
+├── data/              # Content data
+│   └── portfolio.ts   # Portfolio content (easily customizable)
+├── types/             # TypeScript types
+│   └── index.ts       # Type definitions
+├── App.tsx            # Main app component
+├── App.css            # Global styles
+└── index.tsx          # App entry point
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🎨 Customization
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Update Your Information
 
-## Learn More
+Edit `src/data/portfolio.ts` to customize:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Hero Data**: Name, tagline, and introduction
+- **Skills**: Technical and soft skills with proficiency levels
+- **Projects**: Project details, tech stack, challenges, and results
+- **Social Links**: GitHub, LinkedIn, Twitter, email
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Customize Colors
+
+Modify CSS variables in `src/App.css`:
+
+```css
+:root {
+  --accent-primary: #0066ff;    /* Primary accent color */
+  --accent-secondary: #4d94ff;  /* Secondary accent color */
+  /* ... other variables */
+}
+```
+
+### Add Your Own Images
+
+Replace project image placeholders in the `ProjectCard` component or update the project data with actual image URLs.
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `build/` folder.
+
+## 🚀 Deployment
+
+### Deploy to Netlify
+
+1. Push your code to GitHub
+2. Connect your repository to Netlify
+3. Set build command: `npm run build`
+4. Set publish directory: `build`
+5. Deploy!
+
+### Deploy to Vercel
+
+```bash
+npm install -g vercel
+vercel
+```
+
+## 📝 Key Features Explained
+
+### Theme System
+- Uses React Context for state management
+- Persists preference in localStorage
+- CSS variables for seamless theme switching
+- Smooth transitions between themes
+
+### Performance Optimizations
+- Lazy loading of ProjectCard components
+- Intersection Observer for efficient scroll animations
+- Optimized CSS animations
+- Minimal re-renders with proper React hooks
+
+### Animations
+- Fade-in effects on scroll
+- Smooth hover states
+- Progress bar animations
+- Floating background elements
+- Scroll indicator bounce
+
+### Responsive Design
+- Mobile-first approach
+- Hamburger menu for mobile
+- Flexible grid layouts
+- Touch-friendly interactions
+
+## 🤝 Contributing
+
+Feel free to fork this project and customize it for your own portfolio!
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 💬 Contact
+
+- Update the contact information in `src/data/portfolio.ts`
+- The contact form is set up with a basic handler - integrate with your preferred backend or service (FormSpree, EmailJS, etc.)
+
+---
+
+**Built with ❤️ and ☕ by [Your Name]**
