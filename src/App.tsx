@@ -1,9 +1,3 @@
-/**
- * Main App Component
- * Assembles all sections and provides theme context
- */
-
-import React from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
@@ -20,9 +14,8 @@ function App() {
         <Header />
         <main>
           <Hero />
-          {/* <Skills /> */}
           <Projects />
-          {/* <Contact /> */}
+          <Skills />
         </main>
         <Footer />
       </div>

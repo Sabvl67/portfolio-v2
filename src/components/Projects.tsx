@@ -226,16 +226,16 @@ function BentoItem({ feature, span = "", theme = "light", index = 0, isVisible =
     if (color === "#ffffff") return "#1a1a1a";
     // Convert light colors to darker equivalents
     const colorMap: { [key: string]: string } = {
-      "#E0E7FF": "#1e1b4b",
-      "#F0F4FF": "#172554",
-      "#FFF5F0": "#451a03",
-      "#FFE8E0": "#431407",
-      "#F0F9FF": "#082f49",
-      "#E0F2FE": "#0c4a6e",
-      "#FCE7F3": "#500724",
-      "#FFF1F9": "#500724",
-      "#F5F3FF": "#2e1065",
-      "#EDE9FE": "#3b0764",
+      "#A5B4FC": "#3730a3",
+      "#C7D2FE": "#4338ca",
+      "#FED7AA": "#92400e",
+      "#FDBA74": "#b45309",
+      "#BAE6FD": "#0c4a6e",
+      "#7DD3FC": "#0369a1",
+      "#F9A8D4": "#831843",
+      "#FBCFE8": "#9f1239",
+      "#DDD6FE": "#5b21b6",
+      "#C4B5FD": "#6d28d9",
     };
     return colorMap[color] || color;
   });
@@ -255,7 +255,7 @@ function BentoItem({ feature, span = "", theme = "light", index = 0, isVisible =
       <div className="absolute inset-0 -z-10 overflow-hidden rounded-2xl">
         <div className="absolute inset-0 bg-white/85 transition-colors duration-500 dark:bg-white/8" />
         <div
-          className="absolute inset-0 opacity-20 transition-opacity duration-500 dark:opacity-30"
+          className="absolute inset-0 opacity-20 transition-opacity duration-500 dark:opacity-40"
           style={{ background: gradientFill }}
         />
       </div>

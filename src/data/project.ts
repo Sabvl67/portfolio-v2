@@ -7,7 +7,7 @@
       meta: "Layout",
       icon: Aperture,
       animation: "bento2-float 6s ease-in-out infinite",
-      colors: ["#ffffff", "#E0E7FF", "#F0F4FF"],
+      colors: ["#ffffff", "#A5B4FC", "#C7D2FE"],
     },
     {
       title: "Signal Balance",
@@ -15,7 +15,7 @@
       meta: "Tone",
       icon: BarChart3,
       animation: "bento2-pulse 4s ease-in-out infinite",
-      colors: ["#FFF5F0", "#ffffff", "#FFE8E0"],
+      colors: ["#FED7AA", "#ffffff", "#FDBA74"],
     },
     {
       title: "Structured Flow",
@@ -23,7 +23,7 @@
       meta: "Flow",
       icon: LayoutGrid,
       animation: "bento2-tilt 5.5s ease-in-out infinite",
-      colors: ["#F0F9FF", "#ffffff", "#E0F2FE"],
+      colors: ["#BAE6FD", "#ffffff", "#7DD3FC"],
     },
     {
       title: "Clean Signals",
@@ -31,7 +31,7 @@
       meta: "Craft",
       icon: Activity,
       animation: "bento2-drift 8s ease-in-out infinite",
-      colors: ["#ffffff", "#FCE7F3", "#FFF1F9"],
+      colors: ["#ffffff", "#F9A8D4", "#FBCFE8"],
     },
     {
       title: "Quiet Energy",
@@ -39,6 +39,6 @@
       meta: "Pulse",
       icon: Layers,
       animation: "bento2-glow 7s ease-in-out infinite",
-      colors: ["#F5F3FF", "#ffffff", "#EDE9FE"],
+      colors: ["#DDD6FE", "#ffffff", "#C4B5FD"],
     },
   ];
