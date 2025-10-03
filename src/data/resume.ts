@@ -21,6 +21,18 @@ export interface EducationEntry {
   details?: string;
 }
 
+export interface ProjectEntry {
+  name: string;
+  technologies: string;
+  description: string;
+}
+
+export interface AwardEntry {
+  title: string;
+  year: string;
+  organization?: string;
+}
+
 export const resumeData = {
   contactInfo: {
     name: 'Anh Vo',
@@ -34,44 +46,32 @@ export const resumeData = {
 
   workExperience: [
     {
-      name: 'Tech Innovations Inc.',
-      year: '2022-Present',
-      role: 'Senior Full-Stack Developer',
-      description: 'Leading development of scalable web applications using React, TypeScript, and Node.js. Architected microservices infrastructure serving 100k+ daily users, reducing response times by 45%. Mentoring junior developers and establishing best practices for code quality and testing.'
+      name: 'Ontario Power Generation',
+      year: '2024-Apr/2025',
+      role: 'Software Development Engineer',
+      description: '• Developed and deployed full-stack applications (Angular, C#, ASP.NET, SQL) that improved system functionality and user experience, cutting retrieval times by 30%\n\n• Built analytics dashboards with SQL and Power BI, reducing manual checks and increasing equipment performance by 36%\n\n• Spearheaded electronic Work Plans & ITPs, projected to save $50M annually, modernizing regulatory compliance workflows\n\n• Designed digital facility navigation maps, streamlining contractor onboarding and reducing navigation time in complex plant environments'
     },
     {
-      name: 'Digital Creative Studio',
-      year: '2020-2022',
-      role: 'Full-Stack Developer',
-      description: 'Developed custom web applications and e-commerce platforms for diverse clients. Implemented responsive designs and optimized performance, achieving 95+ Lighthouse scores. Collaborated with design teams to translate creative visions into functional products.'
+      name: 'University of Lethbridge',
+      year: 'Oct/2023-Aug/2024',
+      role: 'Business Intelligence & AI Research Assistant',
+      description: '• Applied Python-based data analysis (pandas, NumPy) to uncover insights, enabling informed business and research decisions.\n\n• Implemented machine learning models (OpenAI GPT, social media analytics) to evaluate public engagement strategies.\n\n• Researched API alternatives and data pipelines that improved system interoperability and reduced integration bottlenecks.\n\n •Co-organized Southern Alberta AI Conference 2024, engaging 300+ participants on AI’s business and ethical impacts.'
     },
     {
-      name: 'Startup Accelerator Project',
-      year: '2019-2020',
-      role: 'Frontend Developer',
-      description: 'Built interactive user interfaces for SaaS platform using React and Redux. Implemented real-time features with WebSocket, enhancing user engagement by 60%. Participated in agile development cycles and rapid prototyping sessions.'
+      name: 'AI4Good Lab',
+      year: '2023-2024',
+      role: 'Machine Learning Fellow',
+      description: '• Trained ML models (TensorFlow, PyTorch) with emphasis on preprocessing, training, and evaluation for applied use cases.\n\n• Co-developed PlatePal, an AI-driven grocery planning platform using geospatial data and Q-learning, recognized with the Edmonton Accelerator Award for innovation against food insecurity.\n\n• Collaborated across disciplines to translate research into business-ready prototypes.'
     },
-    {
-      name: 'Freelance Development',
-      year: '2018-2019',
-      role: 'Web Developer & Designer',
-      description: 'Designed and developed websites for small businesses and startups. Managed full project lifecycle from client consultation to deployment. Created custom WordPress themes and plugins, focusing on performance and SEO optimization.'
-    }
   ],
 
   education: [
     {
       degree: 'Bachelor of Science in Computer Science',
-      institution: 'University of California, Berkeley',
-      year: '2014-2018',
-      details: 'Focus on Software Engineering and Human-Computer Interaction. Dean\'s List, GPA: 3.8/4.0'
+      institution: 'University of Lethbridge',
+      year: '2022-Present',
+      details: 'Focus on Software Engineering and minor in Economics.'
     },
-    {
-      degree: 'Full-Stack Web Development Bootcamp',
-      institution: 'Coding Academy',
-      year: '2018',
-      details: 'Intensive 12-week program covering modern web technologies, agile methodologies, and best practices'
-    }
   ],
 
   skills: [
@@ -87,5 +87,38 @@ export const resumeData = {
     'Agile & Scrum',
     'Git & Version Control',
     'Test-Driven Development'
+  ],
+
+  projects: [
+    {
+      name: 'iGEM Hyaluronic Team Website',
+      year: '2024',
+      technologies: 'Angular, C#, ASP.NET, SQL Server',
+      description: 'Digital workflow system for nuclear regulatory compliance, projected to save $50M annually by modernizing paper-based processes.'
+    },
+    {
+      name: 'Family Bloom',
+      year: '2024',
+      technologies: 'SQL, Power BI, C#',
+      description: 'Real-time equipment monitoring dashboards that increased performance tracking efficiency by 36% and reduced manual inspection requirements.'
+    },
+        {
+      name: 'PlatePal – AI-Driven Grocery Platform',
+      technologies: 'Python, TensorFlow, Q-Learning, Geospatial APIs',
+      description: 'AI-driven grocery planning platform that optimizes shopping routes and meal planning using machine learning and geospatial data to combat food insecurity.'
+    }
+  ],
+
+  awards: [
+    {
+      title: 'Alberta Health Hack 2nd Place',
+      organization: 'Arcurve & ACH Foundation',
+      year: '2024',
+    },
+    {
+      title: 'Edmonton Accelerator Award',
+      organization: 'AI4Good Lab',
+      year: '2023-2024',
+    }
   ]
 };
