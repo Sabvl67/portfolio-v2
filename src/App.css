@@ -69,6 +69,7 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
   line-height: 1.6;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body.dark {
@@ -608,17 +609,17 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 .resume-section {
   min-height: 100vh;
-  padding: 8rem 0 4rem;
+  padding: 8rem 2rem 4rem 0rem;
   background: transparent;
 }
 
 .resume-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 4rem; /* Already has horizontal padding */
   display: grid;
   grid-template-columns: 40% 60%;
-  gap: 4rem;
+  gap: 2rem;
   align-items: start;
 }
 

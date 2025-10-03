@@ -33,21 +33,21 @@ export const Skills: React.FC = () => {
               </div>
 
               <div className="contact-group">
-                <a href={`tel:${resumeData.contactInfo.phone.replace(/\D/g, '')}`} className="contact-link">
-                  {resumeData.contactInfo.phone}
-                </a>
-              </div>
-
-              <div className="contact-group">
                 <a href={`https://${resumeData.contactInfo.website}`} target="_blank" rel="noopener noreferrer" className="contact-link">
                   {resumeData.contactInfo.website}
                 </a>
               </div>
             </div>
 
-            <div className="bio-section">
-              <h2 className="bio-title">About</h2>
-              <p className="bio-text">{resumeData.contactInfo.bio}</p>
+            <div className={`skills-tags ${isVisible ? 'fade-in-up' : ''}`}>
+              {resumeData.skills.map((skill, index) => (
+                <span
+                  key={index}
+                  className="skill-tag"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
         </aside>
@@ -104,21 +104,6 @@ export const Skills: React.FC = () => {
 
           {/* Skills */}
           <section className="resume-content-section">
-            <h2 className={`section-header ${isVisible ? 'fade-in-up' : ''}`}>
-              SKILLS
-              <span className="section-divider"></span>
-            </h2>
-
-            <div className={`skills-tags ${isVisible ? 'fade-in-up' : ''}`}>
-              {resumeData.skills.map((skill, index) => (
-                <span
-                  key={index}
-                  className="skill-tag"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
           </section>
         </main>
       </div>

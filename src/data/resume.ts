@@ -1,8 +1,3 @@
-/**
- * Resume content data
- * Centralized data for the resume section
- */
-
 export interface ContactInfo {
   name: string;
   address: string[];
@@ -30,12 +25,9 @@ export const resumeData = {
   contactInfo: {
     name: 'Anh Vo',
     address: [
-      '123 Main Street',
-      'San Francisco, CA 94102',
-      'United States'
+      'Alberta, Canada'
     ],
-    email: 'anh.vo@example.com',
-    phone: '+1 (555) 123-4567',
+    email: 'volequynhanh67@gmail.com',
     website: 'anhvo.dev',
     bio: 'Full-stack developer and creative problem solver with a passion for building elegant, user-centered digital experiences. With expertise spanning modern web technologies, I specialize in transforming complex challenges into intuitive solutions. My approach combines technical excellence with design thinking, ensuring every project delivers both aesthetic appeal and functional value. When I\'m not coding, I\'m exploring emerging technologies and contributing to open-source communities.'
   },
