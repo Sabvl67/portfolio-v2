@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { ThemeToggle } from './ThemeToggle';
-import { LinkedInIcon, GitHubIcon, EmailIcon, UserIcon } from './Icons';
+import { LinkedInIcon, GitHubIcon, EmailIcon } from './Icons';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
 
 export const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,7 +12,7 @@ export const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="hero-minimal">
+    <section id="home" className="hero-minimal">
       {/* Left Sidebar */}
       <div className="hero-sidebar-left">
         <div>
@@ -53,9 +55,13 @@ export const Hero: React.FC = () => {
       {/* Profile Circle */}
       <div className="hero-profile">
         <div className="profile-circle">
-          <UserIcon className="profile-icon" />
+          <DotLottieReact
+            src="https://lottie.host/fb4709e8-eec9-4c5c-b242-213d2d0066e7/QjRluEi6rk.lottie"
+            loop
+            autoplay
+            style={{ width: '100%', height: '100%', background: 'transparent' }}
+          />
         </div>
-        <span className="profile-text">Animated animal here</span>
       </div>
     </section>
   );

@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo a {
   font-size: 1.5rem;
   font-weight: 800;
-  background: var(--accent-gradient);
+  background: linear-gradient(90deg, #FFB088 0%, #E06B9F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -567,17 +567,18 @@ h1, h2, h3, h4, h5, h6 {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #FFB088 0%, #E06B9F 100%);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 20px rgba(224, 107, 159, 0.3);
-  border: 3px solid white;
+  border: none;
   transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
 }
 
 .dark .profile-circle {
-  border-color: #1a1a1a;
   box-shadow: 0 4px 20px rgba(224, 107, 159, 0.5);
 }
 

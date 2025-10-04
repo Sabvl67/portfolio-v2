@@ -65,7 +65,6 @@ export const Skills: React.FC = () => {
           <section className="resume-content-section">
             <h2 className={`section-header ${isVisible ? "fade-in-up" : ""}`}>
               EDUCATION
-              <span className="section-divider"></span>
             </h2>
 
             <div className="experience-list">

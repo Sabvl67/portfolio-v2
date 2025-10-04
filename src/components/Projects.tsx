@@ -129,24 +129,6 @@ function Projects() {
     return () => observer.disconnect();
   }, []);
 
-  const toggleTheme = () => {
-    if (typeof document === "undefined") return;
-    const root = document.documentElement;
-    const current = getRootTheme();
-    const next = current === "dark" ? "light" : "dark";
-    root.classList.toggle("dark", next === "dark");
-    root.classList.toggle("light", next === "light");
-    root.setAttribute("data-theme", next);
-    setTheme(next);
-    try {
-      window.localStorage?.setItem("bento-theme", next);
-    } catch (_err) {
-      /* ignore */
-    }
-  };
-
-
-
   const spans = [
     "md:col-span-4 md:row-span-2",
     "md:col-span-2 md:row-span-1",
@@ -158,7 +140,7 @@ function Projects() {
   return (
     <div className="relative min-h-screen w-full bg-transparent text-neutral-900 transition-colors duration-500 dark:text-white">
 
-      <section
+      <section id="projects"
         ref={sectionRef}
         className={`relative mx-auto max-w-6xl px-6 py-20 motion-safe:opacity-0 ${
           sectionVisible ? "motion-safe:animate-[bento2-intro_0.9s_ease-out_forwards]" : ""
@@ -204,10 +186,13 @@ function Projects() {
 type Feature = {
   title: string;
   blurb: string;
-  meta: string;
+  description: string;
+  meta: string[];
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   animation: string;
   colors: string[];
+  image: string;
+  link: string;
 };
 
 type BentoItemProps = {
@@ -219,7 +204,8 @@ type BentoItemProps = {
 };
 
 function BentoItem({ feature, span = "", theme = "light", index = 0, isVisible = false }: BentoItemProps) {
-  const { icon: Icon, animation, title, blurb, meta, colors } = feature;
+  const { icon: Icon, animation, title, blurb, description, meta, colors, image, link } = feature;
+  const isFeatured = index === 0;
 
   // Darker versions for dark mode
   const darkColors = colors.map(color => {
@@ -246,7 +232,10 @@ function BentoItem({ feature, span = "", theme = "light", index = 0, isVisible =
   const animationDelay = `${Math.max(index * 0.12, 0)}s`;
 
   return (
-    <article
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-neutral-900/10 bg-white/80 p-5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] motion-safe:opacity-0 ${
         isVisible ? "motion-safe:animate-[bento2-card_0.8s_ease-out_forwards]" : ""
       } dark:border-white/10 dark:bg-white/5 dark:shadow-[0_18px_40px_rgba(0,0,0,0.35)] dark:hover:shadow-[0_28px_70px_rgba(0,0,0,0.55)] ${span}`}
@@ -259,6 +248,17 @@ function BentoItem({ feature, span = "", theme = "light", index = 0, isVisible =
           style={{ background: gradientFill }}
         />
       </div>
+
+      {isFeatured && image && (
+        <div className="mb-4 -mx-5 -mt-5 h-48 overflow-hidden">
+          <img
+            src={image}
+            alt={title}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+      )}
+
       <div className="flex items-start gap-4">
         <div className="flex h-12 w-12 items-center justify-center rounded-full border border-neutral-900/15 bg-white transition-colors duration-500 dark:border-white/15 dark:bg-white/10">
           <Icon
@@ -272,17 +272,25 @@ function BentoItem({ feature, span = "", theme = "light", index = 0, isVisible =
             <h3 className="text-base font-semibold uppercase tracking-wide text-neutral-900 transition-colors duration-500 dark:text-white">
               {title}
             </h3>
-            {meta && (
-              <span className="ml-auto rounded-full border border-neutral-900/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.3em] text-neutral-500 transition-colors duration-500 dark:border-white/15 dark:text-white/60">
-                {meta}
-              </span>
-            )}
           </header>
           <p className="mt-2 text-sm leading-relaxed text-neutral-600 transition-colors duration-500 dark:text-white/60">
             {blurb}
           </p>
         </div>
       </div>
+
+      {meta && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {meta.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-neutral-900/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.3em] text-neutral-500 transition-colors duration-500 dark:border-white/15 dark:text-white/60"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
 
       <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         <div
@@ -295,7 +303,7 @@ function BentoItem({ feature, span = "", theme = "light", index = 0, isVisible =
           }}
         />
       </div>
-    </article>
+    </a>
   );
 }
 
