@@ -176,7 +176,7 @@ function Projects() {
         </div>
 
         <footer className="mt-16 border-t border-neutral-900/10 pt-6 text-xs uppercase tracking-[0.2em] text-neutral-500 transition-colors duration-500 dark:border-white/10 dark:text-white/40">
-          Quiet precision for expressive systems.
+          Resume below ⬇️
         </footer>
       </section>
     </div>

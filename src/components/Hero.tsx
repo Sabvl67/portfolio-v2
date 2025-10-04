@@ -41,14 +41,20 @@ export const Hero: React.FC = () => {
       {/* Main Content */}
       <div className={`hero-main-content ${isVisible ? 'fade-in' : ''}`}>
         <h1 className="hero-title">
-          <span className="title-main">Humanized</span>
-          <span className="title-gradient">Design.</span>
+          <div className="title-line">
+            <span className="title-main">Turning </span>
+            <span className="title-gradient">Ideas</span>
+          </div>
+          <div className="title-line">
+            <span className="title-main">into </span>
+            <span className="title-gradient">Impact</span>
+          </div>
         </h1>
         <p className="hero-tagline">
-          I transform thorny problems into elegant solutions using visual design, rapid prototyping, and interaction skills.
+          Full-stack developer combining creative problem-solving with clean code to build applications that make a difference. Let's create something extraordinary together.
         </p>
-        <a href="#about" className="hero-link">
-          Know more →
+        <a href="#footer" className="hero-link">
+          Create Some →
         </a>
       </div>
 

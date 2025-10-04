@@ -1,4 +1,4 @@
-import { Aperture, BarChart3, LayoutGrid, Activity, Layers, Dna, Trophy } from "lucide-react";
+import { BarChart3, Dna, Trophy, Brain, ShoppingBasket } from "lucide-react";
 
 export const projects = [
   {
@@ -39,7 +39,7 @@ export const projects = [
     blurb: "PlatePal uses Q-learning and web scraping to optimize grocery picks for low-income users—balancing budgets and nutrition.",
     description: "PlatePal is a tool to help low-income individuals maximize grocery value: it scrapes real-time deals from Flipp, localizes nearby stores, and recommends items across carbs, dairy, produce, and protein categories. Given a user’s budget, it uses a Q-learning agent to optimize the selection of items under cost constraints. The project combines web scraping, reinforcement learning, and optimization to tackle food insecurity through smart recommendation.",
     meta: ["Web Scraping", "Reinforcement Learning", "Recommender Systems"],
-    icon: Activity,
+    icon: ShoppingBasket,
     animation: "bento2-drift 8s ease-in-out infinite",
     colors: ["#ffffff", "#F9A8D4", "#FBCFE8"],
     image: "/projects/clean-signals.jpg",
@@ -50,7 +50,7 @@ export const projects = [
     blurb: "Built a GAN in TensorFlow/Keras to generate realistic neural spike-count data from rat recordings.",
     description: "Developed a GAN using TensorFlow/Keras to synthesize realistic neural spike-count images from rat firing data. Built end-to-end pipeline including data preprocessing, generator & discriminator networks, loss functions, and training regime.",
     meta: ["GAN", "Deep Learning", "TensorFlow", "Keras"],
-    icon: Layers,
+    icon: Brain,
     animation: "bento2-glow 7s ease-in-out infinite",
     colors: ["#DDD6FE", "#ffffff", "#C4B5FD"],
     image: "/projects/quiet-energy.jpg",
