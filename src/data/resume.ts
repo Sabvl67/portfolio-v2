@@ -41,7 +41,6 @@ export const resumeData = {
     ],
     email: 'volequynhanh67@gmail.com',
     website: 'anhvo.dev',
-    bio: 'Full-stack developer and creative problem solver with a passion for building elegant, user-centered digital experiences. With expertise spanning modern web technologies, I specialize in transforming complex challenges into intuitive solutions. My approach combines technical excellence with design thinking, ensuring every project delivers both aesthetic appeal and functional value. When I\'m not coding, I\'m exploring emerging technologies and contributing to open-source communities.'
   },
 
   workExperience: [
